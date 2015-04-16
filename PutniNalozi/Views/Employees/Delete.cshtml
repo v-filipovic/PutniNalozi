@@ -1,0 +1,43 @@
+﻿@model PutniNalozi.Models.Employee
+
+@{
+    ViewBag.Title = "Zaposlenici";
+}
+
+<h2>Brisanje zaposlenika</h2>
+
+<h3>Jeste li sigurni da želite obrisati navedenog zaposlenika?</h3>
+<div>
+    <br /><h4>Zaposlenik</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Obriši" class="btn btn-default" />
+            </div>
+        </div>
+    }
+</div>
+<div><br />
+    @Html.ActionLink("Povratak na listu zaposlenika", "Index")
+</div>

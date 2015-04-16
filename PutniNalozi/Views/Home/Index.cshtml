@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Početna";
+}
+
+<div class="jumbotron">
+    <h1>Putni nalozi</h1>
+    <p class="lead">"Putni nalozi" je WEB aplikacija namjenjena izradi putnih naloga koja o tome obavijesti odjel financija kako bi korisnik
+        putnog naloga dobio dnevnice i povratak troškova. Proces otvaranja putnog naloga sa strane korisnika
+        putnog naloga izgleda tako da se pošalje mail na trenutno-nebitno@span.eu i u CC stavi email managera
+        koji odobrava putni nalog. Nakon odobrenja managera, putni nalog se otvara. </p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <h2>Popis zaposlenika</h2>
+    <p>
+        Popis zaposlenika funkcionalnost omogućava pregled svih spremljenih zaposlenika, dodavanje novih, uređivanje postojećih te brisanje nepotrebnih zaposlenika. 
+    </p>
+    <p>
+        @Html.ActionLink("Otvori", "Index", "Employees", null, new { @class = "btn btn-default" })
+    </p>
+</div>
